@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pricing | HirePilot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="pricing-container">
+        <h1>Choose Your Plan</h1>
+        <div class="pricing-grid">
+            <div class="plan">
+                <h3>Single Application</h3>
+                <div class="price">₹199</div>
+                <p>1 AI-Optimized Application</p>
+                <button onclick="checkout(199, 'single')" class="btn-pay">Buy Now</button>
+            </div>
+            <div class="plan popular">
+                <h3>Pilot Pro</h3>
+                <div class="price">₹1,499</div>
+                <p>50 Applications/Month</p>
+                <button onclick="checkout(1499, 'pro')" class="btn-pay">Go Pro</button>
+            </div>
+            <div class="plan">
+                <h3>Automation Elite</h3>
+                <div class="price">₹3,999</div>
+                <p>Unlimited Applications</p>
+                <button onclick="checkout(3999, 'elite')" class="btn-pay">Choose Elite</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="js/payments.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Job Filters | HirePilot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Configure Your Job Pilot</h1>
+        <form id="filters-form">
+            <div class="form-section">
+                <h3>Preferences</h3>
+                <label>Target Role</label>
+                <input type="text" id="role" placeholder="e.g. Software Engineer" required>
+
+                <label>Location</label>
+                <input type="text" id="location" placeholder="e.g. New York or Remote">
+
+                <label>Salary Range (Annual)</label>
+                <input type="number" id="min-salary" placeholder="Min">
+                <input type="number" id="max-salary" placeholder="Max">
+            </div>
+
+            <div class="form-section">
+                <h3>Experience & Logistics</h3>
+                <select id="experience-level">
+                    <option value="entry">Entry Level</option>
+                    <option value="mid">Mid Level</option>
+                    <option value="senior">Senior Level</option>
+                </select>
+
+                <select id="job-type">
+                    <option value="full-time">Full-time</option>
+                    <option value="contract">Contract</option>
+                    <option value="part-time">Part-time</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <h3>Resume Upload</h3>
+                <input type="file" id="resume-upload" accept=".pdf,.doc,.docx" required>
+                <p class="hint">Upload your base resume. Gemini AI will optimize it for every application.</p>
+            </div>
+
+            <button type="submit" class="btn-primary">Save & Start Automation</button>
+        </form>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/filters.js"></script>
+</body>
+
+</html>
