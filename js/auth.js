@@ -31,3 +31,15 @@ document.getElementById('login-form')?.addEventListener('submit', async (e) => {
         alert("Invalid credentials.");
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if auth is defined
+    if (typeof auth !== 'undefined') {
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                console.log("User is logged in:", user.email);
+            }
+        });
+    } else {
+        console.error("Firebase Auth not initialized. Check script order.");
+    }
+});
